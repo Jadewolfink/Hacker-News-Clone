@@ -1,0 +1,16 @@
+<div class='header'>
+  <h1>SUPREWOW HACKER NEWS</h1>
+  <p></p>
+</div>
+
+<div class="container">
+    <form method="post" action="/users/<%= @user.id %>">
+    <input type="hidden" value="put" name="_method">
+
+      <input type="text" name="name" placeholder= "Name">
+      <input type="password" name="password" placeholder= "password">
+      <br>
+      <a href="/users/<%=@user.id%>/posts">Posts</a> <a href="/users/<%=@user.id%>/comments"> Comments</a></p>
+      <br><input type="submit" value="Update">
+    </form>
+</div>

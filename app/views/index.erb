@@ -1,0 +1,34 @@
+<div class='header'>
+  <h1>SUPREWOW HACKER NEWS</h1>
+  <p></p>
+</div>
+
+<div class="login">
+
+
+<% if session[:user_id] == nil %>
+    <form action="/login" method="post">
+      <input type="text" name="name" placeholder= "Name"> <input type="password" name="password" placeholder= "password">
+      <br>
+      <br><input type="submit" value="Login">
+    </form>
+      <a href ='/signup'>Sign Up!</a>
+<%else%>
+    <h3>Welcome, <%= a=User.find(session[:user_id]).name %></h3>
+<%end%>
+</div>
+
+
+<div class="container">
+
+
+  <% @posts.each do |x| %>
+  <a href='/posts/<%= x.id%>'><%= x.title %></a>
+  <br>
+
+
+  <p><%= x.created_at %> by <a href='/users/<%= x.user_id%>'><%= x.user.name %></a> <a href='/posts/<%= x.id%>/comments'><%= x.comments.count %> Comments</a></p>
+  <br>
+  <br>
+  <%end%>
+</div>

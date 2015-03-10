@@ -1,0 +1,12 @@
+<div class='header'>
+  <h1>SUPREWOW HACKER NEWS</h1>
+  <p></p>
+</div>
+
+<div class="container">
+   <% x = Post.find(params[:id]) %>
+   <h1><%= x.title %></h1>
+   <%= x.body %>
+   <%= x.created_at %>
+   <a href='/comments/<%x.comments.all%>'><%= x.comments.count %> Comments </a>
+</div>

@@ -1,0 +1,26 @@
+.login {
+  margin: 20px auto;
+  width: 700px;
+  padding: 0px 20px 20px 0px;
+
+}
+
+.container {
+  margin: 20px auto;
+  width: 700px;
+  padding: 0px 20px 20px 20px;
+
+}
+th {
+  text-align: left;
+}
+
+.header {
+  margin: 20px auto;
+  width: 700px;
+  padding: 20px 20px 20px 20px;
+  height: 150px;
+  background-color: orange;
+  text-align: center;
+
+}
